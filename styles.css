@@ -1,0 +1,134 @@
+#content {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-image: url('./images/dark-minimal-hexagons-background_79603-1454.jpg');
+}
+
+#content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5rem;
+}
+
+#header {
+    background-color: white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.grayscale {
+    filter: grayscale(100%);
+}
+
+.info {
+    padding-top: 5rem;
+    padding-left: 10rem;
+    color: white;
+}
+
+.photo {
+    padding-left: 2rem;
+}
+
+#logo {
+    color: white;
+    padding: 0.5rem;
+    background-color: black;
+    max-width: 5rem;
+}
+
+.text-center {
+    padding-top: 7rem;
+    font-size: 0.7rem;
+}
+
+.flip-card {
+    perspective: 1000px; /* Add perspective for 3D effect */
+}
+
+/* Style for the inner part of the flip card */
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s; /* Add a transition for smooth flipping */
+    transform-style: preserve-3d; /* Preserve 3D effect */
+}
+
+/* Style for the front side of the flip card */
+.flip-card-front,
+.flip-card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden; /* Hide the back face of the flip card */
+}
+
+/* Style for the front side of the flip card */
+.flip-card-front {
+    background-color: #ffffff;
+     /* Front side background color */
+}
+
+/* Style for the back side of the flip card */
+.flip-card-back {
+    transform: rotateY(180deg);
+     /* Rotate the back side to be hidden initially */
+}
+
+/* Style for the content on the back side */
+.content {
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-radius: 5rem;
+    background-color: white;
+    color: black;
+
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg); 
+}
+
+.col-md-3 img {
+    max-width: 100%;
+    max-height: 100rem; /* Adjust the maximum height as needed */
+    width: auto;
+    height: auto;
+    filter: grayscale(100%);
+}
+
+.col-md-3 {
+    text-align: center;
+}
+
+#portofolio {
+    padding-top: 2rem;
+    background-color: rgb(73, 73, 73);
+    color: white;
+}
+#portofolio img {
+    max-width: 100%;
+    height: 15rem; 
+    object-fit: cover;
+}
+
+#p-name {
+    color: white;
+    padding-bottom: 2rem;
+}
+
+.about-me {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.projects {
+    list-style-type: none;
+    color: white;
+}
+
+.p-names {
+    color: white;
+}
+
