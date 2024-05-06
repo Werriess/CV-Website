@@ -1,33 +1,46 @@
 #content {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
     background-image: url('./images/dark-minimal-hexagons-background_79603-1454.jpg');
+    font-family: monospace;
 }
 
-#content img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5rem;
+#port {
+    color: white;
+    background-color: rgba(165, 165, 165, 0.5);
+    box-shadow: 5px 5px 10px 0px rgba(165, 165, 165, 0.5)
 }
-
 #header {
     background-color: white;
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
 
+#content img {
+    max-height: 100%; 
+    max-width: 100%; 
+    
+}
+
 .grayscale {
     filter: grayscale(100%);
+    border-radius: 5rem;
+    box-shadow: 5px 5px 10px 5px rgba(165, 165, 165, 0.5)
+}
+
+.blokkie {
+    padding-top: 3rem;
+    padding-bottom: 10rem;
 }
 
 .info {
-    padding-top: 5rem;
+    padding-top: 10rem;
     padding-left: 10rem;
     color: white;
+    font-family: monospace;
 }
 
 .photo {
-    padding-left: 2rem;
+    padding-left: 5rem;
+    padding-top: 5rem;
 }
 
 #logo {
@@ -37,62 +50,9 @@
     max-width: 5rem;
 }
 
-.text-center {
-    padding-top: 7rem;
-    font-size: 0.7rem;
-}
-
-.flip-card {
-    perspective: 1000px; /* Add perspective for 3D effect */
-}
-
-/* Style for the inner part of the flip card */
-.flip-card-inner {
-    width: 100%;
-    height: 100%;
-    transition: transform 0.5s; /* Add a transition for smooth flipping */
-    transform-style: preserve-3d; /* Preserve 3D effect */
-}
-
-/* Style for the front side of the flip card */
-.flip-card-front,
-.flip-card-back {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    backface-visibility: hidden; /* Hide the back face of the flip card */
-}
-
-/* Style for the front side of the flip card */
-.flip-card-front {
-    background-color: #ffffff;
-     /* Front side background color */
-}
-
-/* Style for the back side of the flip card */
-.flip-card-back {
-    transform: rotateY(180deg);
-     /* Rotate the back side to be hidden initially */
-}
-
-/* Style for the content on the back side */
-.content {
-    text-align: center;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    border-radius: 5rem;
-    background-color: white;
-    color: black;
-
-}
-
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg); 
-}
-
 .col-md-3 img {
     max-width: 100%;
-    max-height: 100rem; /* Adjust the maximum height as needed */
+    max-height: 100rem; 
     width: auto;
     height: auto;
     filter: grayscale(100%);
@@ -106,11 +66,7 @@
     padding-top: 2rem;
     background-color: rgb(73, 73, 73);
     color: white;
-}
-#portofolio img {
-    max-width: 100%;
-    height: 15rem; 
-    object-fit: cover;
+    font-family: monospace;
 }
 
 #p-name {
@@ -121,8 +77,28 @@
 .about-me {
     padding-top: 2rem;
     padding-bottom: 2rem;
+    
+    
 }
 
+.aboutC {
+    background-color: rgba(255, 255, 255, 0.5);;
+    margin: 0.5rem;
+    width: 99%;
+}
+.aboutR {
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    font-family:monospace;
+}
+
+.project-block {
+    padding-top: 3rem;
+    height: auto;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
 .projects {
     list-style-type: none;
     color: white;
@@ -130,5 +106,46 @@
 
 .p-names {
     color: white;
+}
+
+.project-block .col-md-3 .project-size {
+    height: 12rem;
+    width: auto;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: rgb(185, 185, 185);
+}
+
+span {
+    transform: translate(50%,-50%);
+    text-transform: uppercase;
+    font-family: verdana;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #f5f5f5;
+    text-shadow: 1px 1px 1px #919191,
+        1px 2px 1px #919191,
+        1px 3px 1px #919191,
+        1px 4px 1px #919191,
+        1px 5px 1px #919191,
+        1px 6px 1px #919191,
+        1px 7px 1px #919191,
+        1px 8px 1px #919191,
+        1px 9px 1px #919191,
+        1px 10px 1px #919191,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
+}
+
+.naming {
+    color: black;
+}
+
+.footer {
+    margin-right: 0.5rem;
 }
 
