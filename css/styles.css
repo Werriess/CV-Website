@@ -33,13 +33,13 @@
 
 .info {
     padding-top: 10rem;
-    padding-left: 10rem;
+    padding-left: 1rem;
     color: white;
     font-family: monospace;
 }
 
 .photo {
-    padding-left: 5rem;
+    padding-left: 1rem;
     padding-top: 5rem;
 }
 
