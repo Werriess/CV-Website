@@ -3,6 +3,29 @@
     font-family: monospace;
 }
 
+.menu {
+    display: flex;
+    float: right;
+}
+
+.menu li {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    list-style-type: none;
+}
+
+.menu li a {
+    color: black;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    color: white;
+    background-color: black;
+    padding: 0.2rem;
+    border-radius: 5rem;
+}
+
 #port {
     color: white;
     background-color: rgba(165, 165, 165, 0.5);
@@ -50,16 +73,18 @@
     max-width: 5rem;
 }
 
-.col-md-3 img {
+.col-md-6 img {
     max-width: 100%;
-    max-height: 100rem; 
-    width: auto;
-    height: auto;
+    width: 20rem;
     filter: grayscale(100%);
 }
 
-.col-md-3 {
+.col-md-6 {
     text-align: center;
+}
+
+.project-size {
+    height: 10rem;
 }
 
 #portofolio {
@@ -96,7 +121,7 @@
 .project-block {
     padding-top: 3rem;
     height: auto;
-    margin-left: 0.5rem;
+    margin-left: 2rem;
     margin-right: 0.5rem;
 }
 .projects {
@@ -148,4 +173,39 @@ span {
 .footer {
     margin-right: 0.5rem;
 }
+
+#form {
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    max-height: auto;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    max-width: 50rem;
+}
+
+#form label {
+    display: block;
+    padding-top: 2rem;
+}
+
+
+#form input {
+    max-width: auto;
+}
+
+
+.body {
+    background-image: url('../images/dark-minimal-hexagons-background_79603-1454.jpg');
+    color: white;
+}
+
+.body h1 {
+    text-align: left;
+    padding-left: 1rem;
+}
+
+
 
