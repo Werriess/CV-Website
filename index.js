@@ -1,3 +1,4 @@
+require('dotenv').config()
 import express from "express"
 import { fileURLToPath } from "url";
 import bodyParser from "body-parser";
@@ -5,8 +6,8 @@ import { join } from 'path';
 import { dirname } from "path";
 
 const app = express();
-const port = 3000;
-const __dirname = dirname(fileURLToPath(import.meta.url))
+const PORT = process.env.PORT || 8001;
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 app.use(bodyParser.urlencoded({extended: true}))
 
@@ -32,6 +33,6 @@ app.post('/submit', (req, res) => {
     res.send('Form data received and processed.');
 });
 
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}.`)
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}.`)
 })
