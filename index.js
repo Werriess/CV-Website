@@ -1,4 +1,4 @@
-require('dotenv').config()
+import dotenv from 'dotenv';
 import express from "express"
 import { fileURLToPath } from "url";
 import bodyParser from "body-parser";
@@ -8,6 +8,7 @@ import { dirname } from "path";
 const app = express();
 const PORT = process.env.PORT || 8001;
 const __dirname = dirname(fileURLToPath(import.meta.url));
+dotenv.config({ path: join(__dirname, '.env') });
 
 app.use(bodyParser.urlencoded({extended: true}))
 
