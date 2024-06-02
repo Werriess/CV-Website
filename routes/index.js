@@ -1,7 +1,10 @@
-import express from "express";
-const usersRouter = express.Router();
-
+import express from 'express';
 import User from '../models/users.js';
+import { fileURLToPath } from 'url';
+import { join, dirname } from 'path';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const usersRouter = express.Router();
 
 usersRouter.post("/submit", async (req, res) => {
     const { name, email, phone, question } = req.body;
@@ -15,20 +18,10 @@ usersRouter.post("/submit", async (req, res) => {
         });
 
         const savedUser = await newUser.save();
-        res.status(201).json(savedUser);
+        res.sendFile(join(__dirname, '../views/success.html'));
     } catch (error) {
         console.error('Error saving user:', error);
         res.status(500).json({ message: 'Error saving user.' });
-    }
-});
-
-usersRouter.get("/view", async (req, res) => {
-    try {
-        const foundUsers = await User.find();
-        res.json(foundUsers);
-    } catch (error) {
-        console.error('Error fetching users:', error);
-        res.status(500).json({ message: 'Error fetching users.' });
     }
 });
 
