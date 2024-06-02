@@ -1,39 +1,30 @@
 import dotenv from 'dotenv';
-import express from "express"
+import { MongoClient } from "mongodb";
 import { fileURLToPath } from "url";
-import bodyParser from "body-parser";
 import { join } from 'path';
 import { dirname } from "path";
 
-const app = express();
-const PORT = process.env.PORT || 8001;
+
 const __dirname = dirname(fileURLToPath(import.meta.url));
 dotenv.config({ path: join(__dirname, '.env') });
 
-app.use(bodyParser.urlencoded({extended: true}))
+const uri = process.env.DB_URL
 
-app.get("/", (req, res) => {
-    res.sendFile(join(__dirname, 'index.html'));
-});
+const client = new MongoClient(uri);
 
-app.use('/css', express.static(join(__dirname, 'css')));
+async function run() {
+  try {
+    const database = client.db('sample_mflix');
+    const movies = database.collection('movies');
 
-app.use('/images', express.static(join(__dirname, 'images')));
+    // Query for a movie that has the title 'Back to the Future'
+    const query = { title: 'Back to the Future' };
+    const movie = await movies.findOne(query);
 
-app.use('/files', express.static(join(__dirname, 'files')));
-
-app.use('/CVWebsiteFav.ico', express.static(join(__dirname, 'CVWebsiteFav.ico')));
-
-app.get("/contact", (req, res) => {
-    res.sendFile(join(__dirname, 'contact.html'))
-})
-
-app.post('/submit', (req, res) => {
-    const { fullName, email, phone, message } = req.body;
-    console.log(`Full Name: ${fullName}, Email: ${email}, Phone: ${phone}, Message: ${message}`);
-    res.send('Form data received and processed.');
-});
-
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}.`)
-})
+    console.log(movie);
+  } finally {
+    // Ensures that the client will close when you finish/error
+    await client.close();
+  }
+}
+run().catch(console.dir);

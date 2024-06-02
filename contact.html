@@ -16,14 +16,18 @@
             <div class="col-md-6">
                 <section id="form">
                     <form action="/submit" method="post">
-                        <label for="">Full Name:</label>
-                        <input type="text" name="" id="">
-                        <label for="">Email:</label>
-                        <input type="text">
-                        <label for="">Phone:</label>
-                        <input type="text">
-                        <label for="">Ask me a question:</label>
-                        <textarea name="" id=""></textarea>
+                        <label for="name">Full Name:</label>
+                        <input type="text" name="name" id="name" required>
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" required>
+                        
+                        <label for="phone">Phone:</label>
+                        <input type="tel" name="phone" id="phone" required>
+                        
+                        <label for="question">Ask me a question:</label>
+                        <textarea name="question" id="question"></textarea>
+                        
                         <br>
                         <br>
                         <button type="submit">Submit</button>
