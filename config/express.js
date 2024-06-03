@@ -24,4 +24,8 @@ app.get("/contact", (req, res) => {
     res.sendFile(join(__dirname, '../views/contact.html'));
 });
 
+app.get("/blog", (req, res) => {
+    res.sendFile(join(__dirname, '../views/blog.html'))
+})
+
 export default app;
