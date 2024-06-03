@@ -20,12 +20,21 @@ app.use('/images', express.static(join(__dirname, '../public/images')));
 app.use('/uploads', express.static(join(__dirname, '../public/uploads')));
 app.use('/users', usersRouter);
 
+
+app.get("/home", (req, res) => {
+    res.sendFile(join(__dirname, '../views/index.html'));
+});
+
 app.get("/contact", (req, res) => {
     res.sendFile(join(__dirname, '../views/contact.html'));
 });
 
+app.get("/about", (req, res) => {
+    res.sendFile(join(__dirname, '../views/about.html'));
+});
+
 app.get("/blog", (req, res) => {
-    res.sendFile(join(__dirname, '../views/blog.html'))
+    res.sendFile(join(__dirname, '../views/blog.html'));
 })
 
 export default app;

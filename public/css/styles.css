@@ -247,9 +247,61 @@ span {
     outline: none; 
 }
 
+#aboutPage {
+    background-image: url('../images/dark-minimal-hexagons-background_79603-1454.jpg');
+    overflow-y: hidden;
+}
 
+.bookSideOne {
+    background-color: rgba(255, 255, 255, 0.411);
+    text-align: left;
+    padding: 2rem;
+    max-height: 51%;
+    overflow-y: scroll;
+}
 
+.bookSideOne::-webkit-scrollbar {
+    width: 12px;
+}
 
+.bookSideOne::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.411)
+}
 
+.bookSideOne::-webkit-scrollbar-thumb {
+    background-color: #888; 
+    border-radius: 10px; 
+    border: 3px solid #ccc; 
+}
 
+.bookSideOne::-webkit-scrollbar-thumb:hover {
+    background-color: #555; 
+}
 
+.bookSideOne h5 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bookSideOne p {
+    color: white;
+}
+
+#aboutMeP1 {
+    padding-bottom: 1rem;
+    border-bottom: solid white 1px;
+}
+
+.aboutMeSkills {
+    color: white;
+}
+
+#aboutMeNav {
+    margin-bottom: 3rem;
+}
+
+#aboutMeProjects h1{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: rgba(255, 255, 255, 0.411);
+}
