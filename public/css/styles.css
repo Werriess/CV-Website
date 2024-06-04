@@ -97,8 +97,6 @@
 .about-me {
     padding-top: 2rem;
     padding-bottom: 2rem;
-    
-    
 }
 
 .aboutC {
@@ -305,3 +303,25 @@ span {
     padding-bottom: 1rem;
     background-color: rgba(255, 255, 255, 0.411);
 }
+
+#profileFoto {
+    animation-name: forward;
+    animation-duration: 1.5s;
+    
+}
+
+.project-size:hover {
+    animation-name: forwardP;
+    animation-duration: 1.5s;
+}
+
+@keyframes forward {
+    from {height: 95%; width: 95%;}
+    to {height: 100%; width: 100%;}
+}
+
+@keyframes forwardP {
+    from {height: 50%;}
+    to {height: 60%;}
+}
+
