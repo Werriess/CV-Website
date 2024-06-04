@@ -114,7 +114,7 @@
 }
 
 .project-block {
-    padding-top: 3rem;
+    padding-top: 6rem;
     height: auto;
     margin-left: 2rem;
     margin-right: 0.5rem;
@@ -312,18 +312,17 @@ span {
 }
 
 .project-size:hover {
-    animation-name: forwardP;
+    animation-name: bounce;
     animation-duration: 1.5s;
+}
+
+.footer {
+    margin-top: 5rem;
 }
 
 @keyframes forward {
     from {height: 95%; width: 95%;}
     to {height: 100%; width: 100%;}
-}
-
-@keyframes forwardP {
-    from {height: 50%;}
-    to {height: 60%;}
 }
 
 @keyframes bounce {
