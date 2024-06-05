@@ -242,8 +242,7 @@ span {
     max-height: auto;
 }
 
-.navbar-toggler {
-    padding-top: 3rem; 
+.navbar-toggler { 
     padding-right: 2rem;
     border: none; 
     outline: none; 
