@@ -323,6 +323,20 @@ span {
     margin-top: 5rem;
 }
 
+#sub {
+    margin: 0;
+    padding: 0;
+}
+
+#containerSuccess {
+    background-image: url('../images/dark-minimal-hexagons-background_79603-1454.jpg');
+}
+
+#containerSuccess h1{
+    margin-top: 0;
+}   
+
+
 @keyframes forward {
     from {height: 95%; width: 95%;}
     to {height: 100%; width: 100%;}
