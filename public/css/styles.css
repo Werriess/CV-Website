@@ -86,6 +86,10 @@
     height: 10rem;
 }
 
+.project-size:hover {
+    cursor: pointer;
+}
+
 #portofolio {
     padding-top: 2rem;
     background-color: rgb(73, 73, 73);
