@@ -21,8 +21,13 @@ app.use('/users/images', express.static(join(__dirname, '../public/images')))
 app.use('/images', express.static(join(__dirname, '../public/images')));
 app.use('/uploads', express.static(join(__dirname, '../public/uploads')));
 app.use('/js', express.static(join(__dirname, '../public/js')))
+app.use('/users/js', express.static(join(__dirname, '../public/js')))
 app.use('/users', usersRouter);
 
+
+app.get("/home", (req, res) => {
+    res.sendFile(join(__dirname, '../views/index.html'));
+});
 
 app.get("/home", (req, res) => {
     res.sendFile(join(__dirname, '../views/index.html'));

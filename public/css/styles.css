@@ -314,7 +314,6 @@ span {
 #profileFoto {
     animation-name: forward;
     animation-duration: 1.5s;
-    
 }
 
 .project-size:hover {
@@ -361,6 +360,7 @@ span {
     width: 50%;
     box-shadow: 10px 10px 5px rgb(214, 219, 221);
 }
+
 
 #shappies {
     font-size: 15rem;

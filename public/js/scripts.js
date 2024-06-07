@@ -5,6 +5,7 @@ const dereuck = document.getElementById("dereuck");
 const userName = document.getElementById("name");
 const email = document.getElementById("email");
 const tel = document.getElementById("phone");
+const goHome = document.getElementById("goHome");
 
 if(calc !== null) {
     calc.addEventListener("click", ()=> {
@@ -29,6 +30,13 @@ if(dereuck !== null) {
         window.location.href = "https://github.com/Werriess/De-reuck_website_New"
     })
 }
+
+if(goHome !== null) {
+    goHome.addEventListener("click", ()=> {
+        window.location.href = "/home"
+    })
+}
+
 
 function validateUserName() {
     let containsNumber = /\d/.test(userName.value);
