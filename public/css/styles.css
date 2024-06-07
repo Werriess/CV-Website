@@ -370,6 +370,9 @@ span {
     animation: rotate 4s infinite;
 }
 
+#reset {
+    border-radius: 5rem;
+}
 
 @keyframes forward {
     from {height: 95%; width: 95%;}
