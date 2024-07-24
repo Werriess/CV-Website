@@ -386,6 +386,10 @@ span {
     border-radius: 5rem;
 }
 
+#infiniteHover {
+    animation: infiniteSlide 3s linear infinite;;
+}
+
 @keyframes forward {
     from {height: 95%; width: 95%;}
     to {height: 100%; width: 100%;}
@@ -425,5 +429,17 @@ span {
     to {
       transform: translateX(0);
       opacity: 1;
+    }
+}
+
+@keyframes infiniteSlide {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(2%);
+    }
+    100% {
+        transform: translateX(0);
     }
 }
