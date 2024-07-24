@@ -59,12 +59,17 @@
     color: white;
     font-family: monospace;
     animation-name: slideIn;
-    animation-duration: 1.5s;
+    animation-duration: 3s;
 }
 
 .photo {
     padding-left: 1rem;
     padding-top: 5rem;
+}
+
+.photo:hover {
+    animation-name: bringToFront;
+    animation-duration: 1s;
 }
 
 #logo {
@@ -117,6 +122,7 @@
     background-color: rgba(255, 255, 255, 0.5);;
     margin: 0.5rem;
     width: 99%;
+
 }
 .aboutR {
     background-color: rgba(255, 255, 255, 0.5);
@@ -404,10 +410,10 @@ span {
 
 @keyframes bringToFront{
     from{
-        scale: 1.1;
+        scale: 1;
     }
     to {
-        scale: 1;
+        scale: 1.05;
     }
 }
 
