@@ -25,6 +25,10 @@
     border-radius: 5rem;
 }
 
+.fix button {
+    padding-right: 0rem;
+}
+
 #port {
     color: white;
     background-color: rgba(165, 165, 165, 0.5);
@@ -54,6 +58,8 @@
     padding-left: 1rem;
     color: white;
     font-family: monospace;
+    animation-name: slideIn;
+    animation-duration: 1.5s;
 }
 
 .photo {
@@ -317,7 +323,7 @@ span {
 }
 
 .project-size:hover {
-    animation-name: bounce;
+    animation-name: bringToFront;
     animation-duration: 1.5s;
 }
 
@@ -393,5 +399,25 @@ span {
     }
     100% {
         transform: rotate(-15deg);
+    }
+}
+
+@keyframes bringToFront{
+    from{
+        scale: 1.1;
+    }
+    to {
+        scale: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+      transform: translateX(200%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
     }
 }
