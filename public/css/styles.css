@@ -59,17 +59,14 @@
     color: white;
     font-family: monospace;
     animation-name: slideIn;
-    animation-duration: 3s;
+    animation-duration: 2s;
 }
 
 .photo {
     padding-left: 1rem;
     padding-top: 5rem;
-}
-
-.photo:hover {
-    animation-name: bringToFront;
-    animation-duration: 1s;
+    animation-name: slideInLeft;
+    animation-duration: 2s;
 }
 
 #logo {
@@ -440,6 +437,15 @@ span {
         transform: translateX(2%);
     }
     100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
         transform: translateX(0);
     }
 }
