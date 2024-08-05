@@ -116,11 +116,22 @@
 }
 
 .aboutC {
-    background-color: rgba(255, 255, 255, 0.5);;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.5);
     margin: 0.5rem;
     width: 99%;
-
 }
+
+.naming {
+    color: rgba(33, 37, 41);
+}
+
+.naming:hover {
+    color: #2f2f2f;
+}
+
 .aboutR {
     background-color: rgba(255, 255, 255, 0.5);
     margin-left: 0.5rem;
@@ -174,10 +185,6 @@ span {
     1px 22px 10px rgba(16,16,16,0.2),
     1px 25px 35px rgba(16,16,16,0.2),
     1px 30px 60px rgba(16,16,16,0.4);
-}
-
-.naming {
-    color: black;
 }
 
 .footer {
