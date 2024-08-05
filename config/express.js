@@ -16,12 +16,12 @@ app.get("/", (req, res) => {
 });
 
 app.use('/css', express.static(join(__dirname, '../public/css')));
-app.use('/users/css', express.static(join(__dirname, '../public/css')))
-app.use('/users/images', express.static(join(__dirname, '../public/images')))
+app.use('/users/css', express.static(join(__dirname, '../public/css')));
+app.use('/users/images', express.static(join(__dirname, '../public/images')));
 app.use('/images', express.static(join(__dirname, '../public/images')));
 app.use('/uploads', express.static(join(__dirname, '../public/uploads')));
-app.use('/js', express.static(join(__dirname, '../public/js')))
-app.use('/users/js', express.static(join(__dirname, '../public/js')))
+app.use('/js', express.static(join(__dirname, '../public/js')));
+app.use('/users/js', express.static(join(__dirname, '../public/js')));
 app.use('/users', usersRouter);
 
 
