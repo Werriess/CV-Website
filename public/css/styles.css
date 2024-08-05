@@ -270,15 +270,26 @@ span {
 
 #aboutPage {
     background-image: url('../images/dark-minimal-hexagons-background_79603-1454.jpg');
+    max-height: 100vh;
+    
+}
+
+.aboutContainer {
+    height: 100%;
     overflow-y: hidden;
+}
+
+#aboutMeBlock {
+    max-height: 50vh;
 }
 
 .bookSideOne {
     background-color: rgba(255, 255, 255, 0.411);
     text-align: left;
     padding: 2rem;
-    max-height: 51%;
-    overflow-y: scroll;
+    margin-left: 0.8rem;
+    height: 100%;
+    overflow-y: auto;
 }
 
 .bookSideOne::-webkit-scrollbar {
@@ -322,9 +333,16 @@ span {
 }
 
 #aboutMeProjects h1{
+    display: flex;
+    justify-content: center;
     padding-top: 1rem;
     padding-bottom: 1rem;
     background-color: rgba(255, 255, 255, 0.411);
+}
+
+.carousel-item img {
+    height: 100%;
+    object-fit: cover;
 }
 
 #profileFoto {
