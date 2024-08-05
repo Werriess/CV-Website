@@ -267,6 +267,8 @@ span {
 #giffie {
     width: 80%;
     max-height: auto;
+    animation: slideIn;
+    animation-duration: 2s;
 }
 
 .navbar-toggler { 
@@ -297,24 +299,8 @@ span {
     margin-left: 0.8rem;
     height: 100%;
     overflow-y: auto;
-}
-
-.bookSideOne::-webkit-scrollbar {
-    width: 12px;
-}
-
-.bookSideOne::-webkit-scrollbar-track {
-    background-color: rgba(255, 255, 255, 0.411)
-}
-
-.bookSideOne::-webkit-scrollbar-thumb {
-    background-color: #888; 
-    border-radius: 10px; 
-    border: 3px solid #ccc; 
-}
-
-.bookSideOne::-webkit-scrollbar-thumb:hover {
-    background-color: #555; 
+    animation: slideInLeft;
+    animation-duration: 2s;
 }
 
 .bookSideOne h5 {
