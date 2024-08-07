@@ -3,6 +3,10 @@
     font-family: monospace;
 }
 
+.toggle {
+    color:yellow;
+}
+
 .menu {
     display: flex;
     float: right;
