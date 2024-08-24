@@ -1,6 +1,22 @@
-#content {
-    background-image: url('../images/dark-minimal-hexagons-background_79603-1454.jpg');
+#body {
+    background-color: rgb(30,  30, 30);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white; 
+    font-size: small;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+    color: white; 
+    font-size: small;
+}
+
+.content {
+    /* background-image: url('../images/dark-minimal-hexagons-background_79603-1454.jpg'); */
+    background-color: rgb(30,  30, 30);
     font-family: monospace;
+    width: 70%;
 }
 
 .toggle {
@@ -46,15 +62,13 @@
 
 .grayscale {
     filter: grayscale(100%);
-    border-radius: 5rem;
-    box-shadow: 5px 5px 10px 5px rgba(165, 165, 165, 0.5);
     max-width: 100%;
     max-height: auto;
 }
 
 .blokkie {
     padding-top: 3rem;
-    padding-bottom: 10rem;
+    padding-bottom: 20rem;
 }
 
 .info {
@@ -145,7 +159,7 @@
 
 .project-block {
     justify-content: center;
-    padding-top: 6rem;
+    padding-top: 10rem;
     height: auto;
     margin-left: 2rem;
     margin-right: 0.5rem;
@@ -248,7 +262,7 @@ span {
 }
 
 .contactMeB {
-    background-image: url('../images/dark-minimal-hexagons-background_79603-1454.jpg');
+    background-color: rgb(30,  30, 30);
     color: white;
 }
 
@@ -282,7 +296,7 @@ span {
 }
 
 #aboutPage {
-    background-image: url('../images/dark-minimal-hexagons-background_79603-1454.jpg');
+    background-color: rgb(30,  30, 30);
     max-height: 100vh;
     
 }
@@ -360,7 +374,7 @@ span {
 }
 
 #containerSuccess {
-    background-image: url('../images/dark-minimal-hexagons-background_79603-1454.jpg');
+    background-color: rgb(30, 30, 30);
     font-family: monospace;
     color: white;
     justify-content: center;
@@ -384,7 +398,6 @@ span {
     padding-bottom: 5rem;
     color: white;
     width: 50%;
-    box-shadow: 10px 10px 5px rgb(214, 219, 221);
 }
 
 

@@ -89,21 +89,21 @@ if(tel !== null) {
     tel.addEventListener("focusout", validatePhone);
 }
 
-let counter = 1;
+// let counter = 1;
 
-function changeBackgroundColor() {
-    if(counter % 2 === 0) {
-        indexContent.style.backgroundImage = "url('../images/dark-minimal-hexagons-background_79603-1454.jpg')";
-        header.classList.remove("toggle");
-    } else {
-        header.classList.add("toggle");
-        indexContent.style.backgroundImage = "none";
-    }
-    counter++;
-}
+// function changeBackgroundColor() {
+//     if(counter % 2 === 0) {
+//         indexContent.style.backgroundImage = "url('../images/dark-minimal-hexagons-background_79603-1454.jpg')";
+//         header.classList.remove("toggle");
+//     } else {
+//         header.classList.add("toggle");
+//         indexContent.style.backgroundImage = "none";
+//     }
+//     counter++;
+// }
 
-if(dayNight !== null) {
-    dayNight.addEventListener("click", changeBackgroundColor);
-}
+// if(dayNight !== null) {
+//     dayNight.addEventListener("click", changeBackgroundColor);
+// }
 
 console.log("Js is connected");
