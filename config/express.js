@@ -41,8 +41,5 @@ app.get("/about", (req, res) => {
     res.sendFile(join(__dirname, '../views/about.html'));
 });
 
-app.get("/blog", (req, res) => {
-    res.sendFile(join(__dirname, '../views/blog.html'));
-})
 
 export default app;

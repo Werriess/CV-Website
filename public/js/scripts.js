@@ -18,6 +18,20 @@ const flickerNeuralFive = document.getElementById("flickerFive");
 const flickerNeuralSix = document.getElementById("flickerSix");
 const flickerNeuralSeven = document.getElementById("flickerSeven");
 const flickerNeuralEight = document.getElementById("flickerEight");
+const flickerNeuralNine = document.getElementById("flickerNine");
+const flickerNeuralTen = document.getElementById("flickerTen");
+const flickerNeuralEleven = document.getElementById("flickerEleven");
+const flickerNeuralTwelve = document.getElementById("flickerTwelve");
+const flickerNeuralThirteen = document.getElementById("flickerThirteen");
+const flickerNeuralFourteen = document.getElementById("flickerFourteen");
+const flickerNeuralFifteen = document.getElementById("flickerFithteen");
+const flickerNeuralSixteen = document.getElementById("flickerSixteen");
+const flickerNeuralSeventeen = document.getElementById("flickerSeventeen");
+const flickerNeuralEighteen = document.getElementById("flickerEighteen");
+const flickerNeuralNineteen = document.getElementById("flickerNineteen");
+const flickerNeuralTwenty = document.getElementById("flickerTwenty");
+const flickerNeuralTwentyOne = document.getElementById("flickerTwentyOne");
+
 
 if(calc !== null) {
     calc.addEventListener("click", ()=> {
@@ -96,32 +110,38 @@ if(tel !== null) {
     tel.addEventListener("focusout", validatePhone);
 }
 
-let functionArr = [flickerNeuralOne, flickerNeuralTwo, flickerNeuralThree, flickerNeuralFour, flickerNeuralFive, flickerNeuralSix, flickerNeuralSeven, flickerNeuralEight];
+const nodes = [
+    flickerNeuralOne, flickerNeuralTwo, flickerNeuralThree, flickerNeuralFour, flickerNeuralFive,
+    flickerNeuralSix, flickerNeuralSeven, flickerNeuralEight, flickerNeuralNine, flickerNeuralTen,
+    flickerNeuralEleven, flickerNeuralTwelve, flickerNeuralThirteen, flickerNeuralFourteen, flickerNeuralFifteen,
+    flickerNeuralSixteen, flickerNeuralSeventeen, flickerNeuralEighteen, flickerNeuralNineteen, flickerNeuralTwenty,
+    flickerNeuralTwentyOne
+];
+
 let originalColor = "white"; 
 
-function changeColor(whichNode) {
-    whichNode.style.fill = "rgb(255, 238, 0)";
+function changeColor(nodeChosen) {
+    nodeChosen.style.fill = "rgb(255, 238, 0)";
 }
 
-function resetColor(whichNode) {
-    whichNode.style.fill = originalColor;
+function resetColor(nodeChosen) {
+    nodeChosen.style.fill = originalColor;
 }
 
 function animateColor() {
-    for (let i = 0; i < functionArr.length; i++) {
-        resetColor(functionArr[i]);
-    }
+    nodes.forEach(node => resetColor(node));
     
+    let randomIndex = Math.floor(Math.random() * nodes.length);
+    changeColor(nodes[randomIndex]);
 
-    let answer = Math.floor(Math.random() * functionArr.length);
-    changeColor(functionArr[answer]);
 }
 
-if (flickerNeuralOne && flickerNeuralTwo && flickerNeuralThree && flickerNeuralFour && flickerNeuralFive && flickerNeuralSix && flickerNeuralSeven && flickerNeuralEight) {
-    setInterval(animateColor, 1000); 
-}
+if (nodes.every(node => node !== null)) {
+    setInterval(animateColor, 1000);
+} 
 
 console.log("Js is connected");
+
 
 
 // let counter = 1;

@@ -7,15 +7,21 @@
     font-size: small;
 }
 
+.navbar-light .navbar-nav .nav-link:hover {
+    color:  rgb(255, 238, 0);
+}
+
 .navbar-light .navbar-nav .nav-link.active {
     color: white; 
     font-size: small;
 }
 
+.navbar-light .navbar-nav .nav-link.active:hover {
+    color:  rgb(255, 238, 0);
+}
+
 .content {
-    /* background-image: url('../images/dark-minimal-hexagons-background_79603-1454.jpg'); */
     background-color: rgb(30,  30, 30);
-    font-family: monospace;
     width: 70%;
 }
 
@@ -23,37 +29,11 @@
     color:yellow;
 }
 
-.menu {
-    display: flex;
-    float: right;
-}
-
-.menu li {
-    padding-right: 5rem;
-    list-style-type: none;
-}
-
-.menu li a {
-    color: black;
-    text-decoration: none;
-}
-
-.menu li a:hover {
-    color: white;
-    background-color: black;
-    padding: 0.2rem;
-    border-radius: 5rem;
-}
-
 .fix button {
     padding-right: 0rem;
 }
 
-#port {
-    color: white;
-    background-color: rgba(165, 165, 165, 0.5);
-    box-shadow: 5px 5px 10px 0px rgba(165, 165, 165, 0.5)
-}
+
 #header {
     background-color: white;
     padding-top: 1rem;
@@ -68,7 +48,7 @@
 
 .blokkie {
     padding-top: 3rem;
-    padding-bottom: 20rem;
+    padding-bottom: 15rem;
 }
 
 #neuralNetwork {
@@ -81,7 +61,6 @@
     padding-top: 10rem;
     padding-left: 1rem;
     color: white;
-    font-family: monospace;
     animation-name: slideIn;
     animation-duration: 2s;
 }
@@ -114,6 +93,32 @@
     padding-left: 0rem;
 }
 
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    min-width: 100%;
+    color: white;
+}
+
+.grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.divIcon {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.skills h4 {
+    color: white;
+    font-weight: bold;
+    margin-top: 5rem;
+}
+
 .project-size {
     height: 10rem;
 }
@@ -126,7 +131,6 @@
     padding-top: 2rem;
     background-color: rgb(73, 73, 73);
     color: white;
-    font-family: monospace;
 }
 
 #p-name {
@@ -148,31 +152,41 @@
     width: 99%;
 }
 
-.naming {
-    color: rgba(33, 37, 41);
-}
 
 .naming:hover {
-    color: #2f2f2f;
+    color: black;
 }
 
 .aboutR {
-    background-color: rgba(255, 255, 255, 0.5);
-    margin-left: 0.5rem;
+    color: white;
     margin-right: 0.5rem;
-    font-family:monospace;
+    padding: 2rem 2rem 2rem 0;
+}
+
+.aboutR h4 {
+    font-weight: bold;
+}
+
+.aboutR p {
+    padding-top: 2rem;
+    font-size: medium;
 }
 
 .project-block {
-    justify-content: center;
     padding-top: 10rem;
     height: auto;
-    margin-left: 2rem;
     margin-right: 0.5rem;
 }
+
+.project-block h4 {
+    color: white;
+    font-weight: bold;
+}
+
 .projects {
     list-style-type: none;
     color: white;
+    font-size: small;
 }
 
 .p-names {
@@ -182,6 +196,37 @@
 .project-block .col-md-3 .project-size {
     height: 12rem;
     width: auto;
+}
+
+.aboutFoot {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    padding: 1rem 2rem 1rem 0rem;
+    width: 99%;
+}
+
+.aboutFoot a {
+    color: white;
+}
+
+.aboutFoot a:hover {
+    color: white;
+}
+
+.footer {
+    margin-top: 5rem;
+    margin-right: 0.5rem;
+}
+
+.footer h4 {
+    color: white;
+    font-weight: bold;
+}
+
+.contact {
+    padding-left: 0rem;
 }
 
 body {
@@ -194,7 +239,7 @@ span {
     font-family: verdana;
     font-size: 2rem;
     font-weight: 700;
-    color: rgb(255, 238, 0);
+    color: rgb(233, 225, 110);
     text-shadow: 1px 1px 1px #919191,
         1px 2px 1px #919191,
         1px 3px 1px #919191,
@@ -211,17 +256,13 @@ span {
     1px 30px 60px rgba(16,16,16,0.4);
 }
 
-.footer {
-    margin-right: 0.5rem;
-}
-
 #form {
     align-content: center;
     align-items: center;
     text-align: left;
     max-height: auto;
-    color: white;
-    background-color: rgba(255, 255, 255, 0.411);
+    color: black;
+    background-color:  rgb(233, 225, 110);
     padding-left: 5rem;
     padding-top: 1rem;
     padding-bottom: 7.3rem;
@@ -329,11 +370,14 @@ span {
 
 .bookSideOne h5 {
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .bookSideOne p {
     color: white;
+}
+
+.port-back {
+    padding-bottom: 2rem;
 }
 
 #aboutMeP1 {
@@ -367,10 +411,6 @@ span {
     animation-duration: 1.5s;
 }
 
-.footer {
-    margin-top: 5rem;
-}
-
 #sub {
     margin: 0;
     padding: 0;
@@ -381,7 +421,6 @@ span {
 
 #containerSuccess {
     background-color: rgb(30, 30, 30);
-    font-family: monospace;
     color: white;
     justify-content: center;
     text-align: center;
@@ -485,4 +524,10 @@ span {
         transform: translateX(0);
     }
 }
+
+@media only screen and (max-width: 1224px) {
+    .aboutFoot {
+        flex-direction: column;
+    }
+  }
 
