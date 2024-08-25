@@ -10,7 +10,14 @@ const dayNight = document.getElementById("dayNight");
 const header = document.getElementById("indexTitle");
 const indexContent = document.getElementById("content");
 const infoIndex = document.getElementById("infoIndex");
-
+const flickerNeuralOne = document.getElementById("flickerOne");
+const flickerNeuralTwo = document.getElementById("flickerTwo");
+const flickerNeuralThree = document.getElementById("flickerThree");
+const flickerNeuralFour = document.getElementById("flickerFour");
+const flickerNeuralFive = document.getElementById("flickerFive");
+const flickerNeuralSix = document.getElementById("flickerSix");
+const flickerNeuralSeven = document.getElementById("flickerSeven");
+const flickerNeuralEight = document.getElementById("flickerEight");
 
 if(calc !== null) {
     calc.addEventListener("click", ()=> {
@@ -88,6 +95,34 @@ function validatePhone() {
 if(tel !== null) {
     tel.addEventListener("focusout", validatePhone);
 }
+
+let functionArr = [flickerNeuralOne, flickerNeuralTwo, flickerNeuralThree, flickerNeuralFour, flickerNeuralFive, flickerNeuralSix, flickerNeuralSeven, flickerNeuralEight];
+let originalColor = "white"; 
+
+function changeColor(whichNode) {
+    whichNode.style.fill = "rgb(255, 238, 0)";
+}
+
+function resetColor(whichNode) {
+    whichNode.style.fill = originalColor;
+}
+
+function animateColor() {
+    for (let i = 0; i < functionArr.length; i++) {
+        resetColor(functionArr[i]);
+    }
+    
+
+    let answer = Math.floor(Math.random() * functionArr.length);
+    changeColor(functionArr[answer]);
+}
+
+if (flickerNeuralOne && flickerNeuralTwo && flickerNeuralThree && flickerNeuralFour && flickerNeuralFive && flickerNeuralSix && flickerNeuralSeven && flickerNeuralEight) {
+    setInterval(animateColor, 1000); 
+}
+
+console.log("Js is connected");
+
 
 // let counter = 1;
 
