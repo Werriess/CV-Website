@@ -31,35 +31,6 @@ const flickerNeuralEighteen = document.getElementById("flickerEighteen");
 const flickerNeuralNineteen = document.getElementById("flickerNineteen");
 const flickerNeuralTwenty = document.getElementById("flickerTwenty");
 const flickerNeuralTwentyOne = document.getElementById("flickerTwentyOne");
-const flickerNeuralOneGame = document.getElementById("flickerOneGame");
-const flickerNeuralTwoGame = document.getElementById("flickerTwoGame");
-const flickerNeuralThreeGame = document.getElementById("flickerThreeGame");
-const flickerNeuralFourGame = document.getElementById("flickerFourGame");
-const flickerNeuralFiveGame = document.getElementById("flickerFiveGame");
-const flickerNeuralSixGame = document.getElementById("flickerSixGame");
-const flickerNeuralSevenGame = document.getElementById("flickerSevenGame");
-const flickerNeuralEightGame = document.getElementById("flickerEightGame");
-const flickerNeuralNineGame = document.getElementById("flickerNineGame");
-const flickerNeuralTenGame = document.getElementById("flickerTenGame");
-const flickerNeuralElevenGame = document.getElementById("flickerElevenGame");
-const flickerNeuralTwelveGame = document.getElementById("flickerTwelveGame");
-const flickerNeuralThirteenGame = document.getElementById("flickerThirteenGame");
-const flickerNeuralFourteenGame = document.getElementById("flickerFourteenGame");
-const flickerNeuralFithteenGame = document.getElementById("flickerFithteenGame");
-const flickerNeuralSixteenGame = document.getElementById("flickerSixteenGame");
-const flickerNeuralSeventeenGame = document.getElementById(
-  "flickerSeventeenGame"
-);
-const flickerNeuralEighteenGame = document.getElementById(
-  "flickerEighteenGame"
-);
-const flickerNeuralNineteenGame = document.getElementById(
-  "flickerNineteenGame"
-);
-const flickerNeuralTwentyGame = document.getElementById("flickerTwentyGame");
-const flickerNeuralTwentyOneGame = document.getElementById(
-  "flickerTwentyOneGame"
-);
 const gridItems = document.querySelectorAll(".grid-item");
 const playGame = document.getElementById("playGame");
 const scoreVal = document.getElementById("score-p");
