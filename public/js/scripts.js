@@ -31,118 +31,143 @@ const flickerNeuralEighteen = document.getElementById("flickerEighteen");
 const flickerNeuralNineteen = document.getElementById("flickerNineteen");
 const flickerNeuralTwenty = document.getElementById("flickerTwenty");
 const flickerNeuralTwentyOne = document.getElementById("flickerTwentyOne");
+const gridItems = document.querySelectorAll(".grid-item");
 
-
-if(calc !== null) {
-    calc.addEventListener("click", ()=> {
-        window.location.href = "https://github.com/Werriess/Calculator";
-    })
+if (calc !== null) {
+  calc.addEventListener("click", () => {
+    window.location.href = "https://github.com/Werriess/Calculator";
+  });
 }
 
-if(memory !== null) {
-    memory.addEventListener("click", ()=> {
-        window.location.href = "https://github.com/Werriess/MemoryGame";
-    })
+if (memory !== null) {
+  memory.addEventListener("click", () => {
+    window.location.href = "https://github.com/Werriess/MemoryGame";
+  });
 }
 
-if(prov !== null) {
-    prov.addEventListener("click", ()=> {
-        window.location.href = "https://github.com/Werriess/Province-game";
-    })
+if (prov !== null) {
+  prov.addEventListener("click", () => {
+    window.location.href = "https://github.com/Werriess/Province-game";
+  });
 }
 
-if(dereuck !== null) {
-    dereuck.addEventListener("click", ()=> {
-        window.location.href = "https://github.com/Werriess/De-reuck_website_New"
-    })
+if (dereuck !== null) {
+  dereuck.addEventListener("click", () => {
+    window.location.href = "https://github.com/Werriess/De-reuck_website_New";
+  });
 }
 
-if(goHome !== null) {
-    goHome.addEventListener("click", ()=> {
-        window.location.href = "/home"
-    })
+if (goHome !== null) {
+  goHome.addEventListener("click", () => {
+    window.location.href = "/home";
+  });
 }
-
 
 function validateUserName() {
-    let containsNumber = /\d/.test(userName.value);
-    if(userName.value.length < 2 || userName.value == "" || containsNumber) {
-        userName.style.borderColor = "red";
-    }
-    else {
-        userName.style.borderColor = "black";
-    }
+  let containsNumber = /\d/.test(userName.value);
+  if (userName.value.length < 2 || userName.value == "" || containsNumber) {
+    userName.style.borderColor = "red";
+  } else {
+    userName.style.borderColor = "black";
+  }
 }
 
-if(userName !== null) {
-    userName.addEventListener("focusout", validateUserName);
+if (userName !== null) {
+  userName.addEventListener("focusout", validateUserName);
 }
 
 function validateEmail() {
-    const regexPattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
-    let emailTest = regexPattern.test(email.value);
-    if(!emailTest) {
-        email.style.borderColor = "red";
-        email.value = null;
-    }
-    else {
-        email.style.borderColor = "black";
-    }
+  const regexPattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+  let emailTest = regexPattern.test(email.value);
+  if (!emailTest) {
+    email.style.borderColor = "red";
+    email.value = null;
+  } else {
+    email.style.borderColor = "black";
+  }
 }
 
-if(email !== null) {
-    email.addEventListener("focusout", validateEmail);
+if (email !== null) {
+  email.addEventListener("focusout", validateEmail);
 }
 
 function validatePhone() {
-    const regexPattern = /^\d+$/;
-    let telTest = regexPattern.test(tel.value);
-    if(!telTest) {
-        tel.style.borderColor = "red";
-        tel.value = null;
-    }
-    else {
-        tel.style.borderColor = "black";
-    }
+  const regexPattern = /^\d+$/;
+  let telTest = regexPattern.test(tel.value);
+  if (!telTest) {
+    tel.style.borderColor = "red";
+    tel.value = null;
+  } else {
+    tel.style.borderColor = "black";
+  }
 }
 
-if(tel !== null) {
-    tel.addEventListener("focusout", validatePhone);
+if (tel !== null) {
+  tel.addEventListener("focusout", validatePhone);
 }
 
 const nodes = [
-    flickerNeuralOne, flickerNeuralTwo, flickerNeuralThree, flickerNeuralFour, flickerNeuralFive,
-    flickerNeuralSix, flickerNeuralSeven, flickerNeuralEight, flickerNeuralNine, flickerNeuralTen,
-    flickerNeuralEleven, flickerNeuralTwelve, flickerNeuralThirteen, flickerNeuralFourteen, flickerNeuralFifteen,
-    flickerNeuralSixteen, flickerNeuralSeventeen, flickerNeuralEighteen, flickerNeuralNineteen, flickerNeuralTwenty,
-    flickerNeuralTwentyOne
+  flickerNeuralOne,
+  flickerNeuralTwo,
+  flickerNeuralThree,
+  flickerNeuralFour,
+  flickerNeuralFive,
+  flickerNeuralSix,
+  flickerNeuralSeven,
+  flickerNeuralEight,
+  flickerNeuralNine,
+  flickerNeuralTen,
+  flickerNeuralEleven,
+  flickerNeuralTwelve,
+  flickerNeuralThirteen,
+  flickerNeuralFourteen,
+  flickerNeuralFifteen,
+  flickerNeuralSixteen,
+  flickerNeuralSeventeen,
+  flickerNeuralEighteen,
+  flickerNeuralNineteen,
+  flickerNeuralTwenty,
+  flickerNeuralTwentyOne,
 ];
 
-let originalColor = "white"; 
+let originalColor = "white";
 
 function changeColor(nodeChosen) {
-    nodeChosen.style.fill = "rgb(255, 238, 0)";
+  nodeChosen.style.fill = "rgb(255, 238, 0)";
 }
 
 function resetColor(nodeChosen) {
-    nodeChosen.style.fill = originalColor;
+  nodeChosen.style.fill = originalColor;
 }
 
 function animateColor() {
-    nodes.forEach(node => resetColor(node));
-    
-    let randomIndex = Math.floor(Math.random() * nodes.length);
-    changeColor(nodes[randomIndex]);
+  nodes.forEach((node) => resetColor(node));
 
+  let randomIndex = Math.floor(Math.random() * nodes.length);
+  changeColor(nodes[randomIndex]);
 }
 
-if (nodes.every(node => node !== null)) {
-    setInterval(animateColor, 1000);
-} 
+if (nodes.every((node) => node !== null)) {
+  setInterval(animateColor, 1000);
+}
+
+gridItems.forEach(function (gridItem) {
+  gridItem.addEventListener("mouseenter", function () {
+    let p = gridItem.querySelector("p");
+    if (p) {
+      p.style.visibility = "visible";
+    }
+  });
+
+  gridItem.addEventListener("mouseleave", function () {
+    let p = gridItem.querySelector("p");
+    if (p) {
+      p.style.visibility = "hidden";
+    }
+  });
+});
 
 console.log("Js is connected");
-
-
 
 // let counter = 1;
 

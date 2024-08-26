@@ -104,7 +104,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1.5rem;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.grid-item svg:hover {
+    animation-name: bringToFrontSVG;
+    animation-duration: 1s;
+}
+
+.grid-item p {
+    visibility: hidden;
 }
 
 .divIcon {
@@ -489,6 +499,15 @@ span {
     }
     to {
         scale: 1.05;
+    }
+}
+
+@keyframes bringToFrontSVG{
+    from{
+        scale: 1;
+    }
+    to {
+        scale: 1.2;
     }
 }
 
