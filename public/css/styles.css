@@ -543,34 +543,29 @@ span {
     }
 }
 
+
 @media only screen and (max-width: 1224px) {
-    .aboutFoot {
-        flex-direction: column;
-    }
-
-}
-
-@media only screen and (max-width: 600px) {
     #neuralNetwork {
       display: none;
     }
-}
-
-@media only screen and (max-width: 600px) {
+    .blokkie {
+        padding-bottom: 5rem;
+    }
     .gridContainer {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(5, 1fr);
     }
-} 
-
-@media only screen and (max-width: 1200px) {
+    .grid-item {
+        padding-left: 0rem;
+    }
     #form {
         padding-left: 1.5rem;
     }
-} 
-
-@media only screen and (max-width: 850px) {
     .info {
         padding-top: 3rem;
     }
-} 
+    .aboutFoot {
+        flex-direction: column;
+    }
+}
+
