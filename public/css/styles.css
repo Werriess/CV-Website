@@ -182,6 +182,7 @@
 }
 
 .project-block {
+    display: flex;
     padding-top: 10rem;
     height: auto;
     margin-right: 0.5rem;
@@ -472,6 +473,74 @@ span {
     animation: infiniteSlide 3s linear infinite;;
 }
 
+.transcriptForm {
+    display: none;
+    position: fixed;
+    top: 7rem;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 1.5rem;
+    border: solid 2px;
+    width: 70%;
+    z-index: 1000;
+    background-color: rgb(30,  30, 30);
+}
+
+.transcriptForm form{
+    width: 60%;
+}
+
+.transcriptWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+
+}
+
+.transcriptWrapper input,
+.transcriptWrapper textarea {
+    width: 100%; 
+    padding: 0.25rem;
+}
+
+.transcriptWrapper button {
+    max-width: 25%;
+    border: none;
+    background-color: #464646;
+    color: white;
+    padding: 0.25rem;
+    cursor: pointer;
+}
+
+
+.transcriptForm p{
+    color: white;
+    font-size: large;
+    font-weight: bold;
+
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#transcript:hover {
+    cursor: pointer;
+    border-bottom: solid 1px;
+
+}
+
+
 @keyframes forward {
     from {height: 95%; width: 95%;}
     to {height: 100%; width: 100%;}
@@ -567,6 +636,9 @@ span {
     }
     .aboutFoot {
         flex-direction: column;
+    }
+    .transcriptWrapper button {
+        max-width: 50%;
     }
 }
 

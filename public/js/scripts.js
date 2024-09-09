@@ -35,6 +35,10 @@ const gridItems = document.querySelectorAll(".grid-item");
 const playGame = document.getElementById("playGame");
 const scoreVal = document.getElementById("score-p");
 const button = document.getElementById("score-btn");
+const transcriptBtn = document.getElementById("transcript");
+const transcriptForm = document.querySelector(".transcriptForm");
+const projectBlock = document.querySelector(".project-block");
+const closeBtn = document.querySelector(".close-btn");
 
 if (playGame !== null) {
   playGame.addEventListener("click", () => {
@@ -71,6 +75,19 @@ if (goHome !== null) {
     window.location.href = "/home";
   });
 }
+
+if(transcriptBtn !== null) {
+    transcriptBtn.addEventListener("click", () => {
+      transcriptForm.style.display = "flex";
+      projectBlock.style.display = "none";
+    })
+}
+
+closeBtn.addEventListener("click", () => {
+  transcriptForm.style.display = "none";
+  projectBlock.style.display = "flex";
+
+});
 
 function validateUserName() {
   let containsNumber = /\d/.test(userName.value);
