@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 import { fileURLToPath } from 'url';
 import { join, dirname } from 'path';
 import usersRouter from '../routes/index.js'; 
+import transcriptRouter from '../routes/transcriptRouter.js'
 
 const app = express();
 
@@ -23,6 +24,7 @@ app.use('/uploads', express.static(join(__dirname, '../public/uploads')));
 app.use('/js', express.static(join(__dirname, '../public/js')));
 app.use('/users/js', express.static(join(__dirname, '../public/js')));
 app.use('/users', usersRouter);
+app.use('/transcript', transcriptRouter);
 
 
 app.get("/home", (req, res) => {

@@ -540,6 +540,26 @@ span {
 
 }
 
+.notification {
+    position: fixed;
+    bottom: 20px;
+    left: 82%;
+    background-color: rgb(30, 30, 30);
+    color: white;
+    padding: 0.5rem;
+    z-index: 1000;
+    border: solid 1px white;
+}
+
+.notification.error {
+    background-color: red; 
+}
+
+.hidden {
+    display: none;
+}
+
+
 
 @keyframes forward {
     from {height: 95%; width: 95%;}
@@ -639,6 +659,9 @@ span {
     }
     .transcriptWrapper button {
         max-width: 50%;
+    }
+    .notification {
+        left: 60%;
     }
 }
 

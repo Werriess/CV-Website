@@ -39,6 +39,9 @@ const transcriptBtn = document.getElementById("transcript");
 const transcriptForm = document.querySelector(".transcriptForm");
 const projectBlock = document.querySelector(".project-block");
 const closeBtn = document.querySelector(".close-btn");
+const transcriptFormSubmit = document.getElementById('transcriptForm');
+const notification = document.getElementById('notification');
+const notificationMessage = document.getElementById('notificationMessage');
 
 if (playGame !== null) {
   playGame.addEventListener("click", () => {
@@ -48,13 +51,13 @@ if (playGame !== null) {
 
 if (calc !== null) {
   calc.addEventListener("click", () => {
-    window.location.href = "https://github.com/Werriess/Calculator";
+    window.location.href = "https://github.com/Werriess/VidJump";
   });
 }
 
 if (memory !== null) {
   memory.addEventListener("click", () => {
-    window.location.href = "https://github.com/Werriess/MemoryGame";
+    window.location.href = "https://github.com/Werriess/Machine-Learning-382-Project-1";
   });
 }
 
@@ -132,6 +135,7 @@ if (tel !== null) {
   tel.addEventListener("focusout", validatePhone);
 }
 
+//Highlighting different dots in neural network
 const nodes = [
   flickerNeuralOne,
   flickerNeuralTwo,
@@ -192,22 +196,54 @@ gridItems.forEach(function (gridItem) {
     }
   });
 });
+/*
+  On form submit, get response from backend and send a messgae to the frontend
+*/
+transcriptFormSubmit.addEventListener('submit', async function(event) {
+    event.preventDefault(); 
 
-// let counter = 1;
+    const fullName = document.getElementById('transcriptName').value;
+    const email = document.getElementById('transcriptEmail').value;
+    const reason = document.getElementById('transcriptReason').value;
 
-// function changeBackgroundColor() {
-//     if(counter % 2 === 0) {
-//         indexContent.style.backgroundImage = "url('../images/dark-minimal-hexagons-background_79603-1454.jpg')";
-//         header.classList.remove("toggle");
-//     } else {
-//         header.classList.add("toggle");
-//         indexContent.style.backgroundImage = "none";
-//     }
-//     counter++;
-// }
+    try {
+        const response = await fetch('/transcript/submit', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ fullName, email, reason })
+        });
 
-// if(dayNight !== null) {
-//     dayNight.addEventListener("click", changeBackgroundColor);
-// }
+        if (response.ok) {
+            const data = await response.json();
+            showNotification(data.message, 'success');  
+            transcriptFormSubmit.reset(); 
+        } else {
+            const errorData = await response.json();
+            showNotification(`Error: ${errorData.message}`, 'error');
+        }
+    } catch (error) {
+      showNotification('An error occurred while submitting the request.', 'error');
+        console.error('Error:', error);
+    }
+
+    //Function to allow the message from the backend to be displayed in div in the frondend
+
+    function showNotification(message, type) {
+      notificationMessage.textContent = message;
+      notification.classList.remove('hidden');
+      notification.classList.add('visible');
+  
+      if (type === 'error') {
+          notification.classList.add('error');
+      } else {
+          notification.classList.remove('error');
+      }
+  
+      setTimeout(() => {
+          notification.classList.remove('visible');
+          notification.classList.add('hidden');
+      }, 3000);
+  }
+})
 
 console.log("Js is connected");
