@@ -32,9 +32,6 @@ const flickerNeuralNineteen = document.getElementById("flickerNineteen");
 const flickerNeuralTwenty = document.getElementById("flickerTwenty");
 const flickerNeuralTwentyOne = document.getElementById("flickerTwentyOne");
 const gridItems = document.querySelectorAll(".grid-item");
-const playGame = document.getElementById("playGame");
-const scoreVal = document.getElementById("score-p");
-const button = document.getElementById("score-btn");
 const transcriptBtn = document.getElementById("transcript");
 const transcriptForm = document.querySelector(".transcriptForm");
 const projectBlock = document.querySelector(".project-block");
@@ -42,12 +39,6 @@ const closeBtn = document.querySelector(".close-btn");
 const transcriptFormSubmit = document.getElementById('transcriptForm');
 const notification = document.getElementById('notification');
 const notificationMessage = document.getElementById('notificationMessage');
-
-if (playGame !== null) {
-  playGame.addEventListener("click", () => {
-    window.location.href = "/memorygame";
-  });
-}
 
 if (calc !== null) {
   calc.addEventListener("click", () => {
@@ -181,18 +172,24 @@ if (nodes.every((node) => node !== null)) {
   setInterval(animateColor, 1000);
 }
 
-gridItems.forEach(function (gridItem) {
+gridItems.forEach(gridItem => {
   gridItem.addEventListener("mouseenter", function () {
     let p = gridItem.querySelector("p");
-    if (p) {
+    let item = gridItem.querySelector("svg");
+    if (p && item) {
       p.style.visibility = "visible";
+      p.style.fontSize = "small";
+      p.style.opacity = "0.7"
+      item.style.transform = "scale(1.2)"
     }
   });
 
   gridItem.addEventListener("mouseleave", function () {
     let p = gridItem.querySelector("p");
-    if (p) {
+    let item = gridItem.querySelector("svg");
+    if (p && item) {
       p.style.visibility = "hidden";
+      item.style.transform = "scale(1)"
     }
   });
 });

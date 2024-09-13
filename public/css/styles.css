@@ -108,11 +108,6 @@
     padding: 1rem;
 }
 
-.grid-item svg:hover {
-    animation-name: bringToFrontSVG;
-    animation-duration: 1s;
-}
-
 .grid-item p {
     visibility: hidden;
 }
