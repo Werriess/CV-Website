@@ -1,5 +1,4 @@
 const calc = document.getElementById("calc");
-const memory = document.getElementById("memory");
 const prov = document.getElementById("prov");
 const dereuck = document.getElementById("dereuck");
 const userName = document.getElementById("name");
@@ -172,8 +171,10 @@ if (nodes.every((node) => node !== null)) {
   setInterval(animateColor, 1000);
 }
 
+//Add animation display on skills grid
+
 gridItems.forEach(gridItem => {
-  gridItem.addEventListener("mouseenter", function () {
+  gridItem.addEventListener("mouseenter", () => {
     let p = gridItem.querySelector("p");
     let item = gridItem.querySelector("svg");
     if (p && item) {
@@ -184,7 +185,7 @@ gridItems.forEach(gridItem => {
     }
   });
 
-  gridItem.addEventListener("mouseleave", function () {
+  gridItem.addEventListener("mouseleave", () => {
     let p = gridItem.querySelector("p");
     let item = gridItem.querySelector("svg");
     if (p && item) {
