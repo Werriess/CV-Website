@@ -1,5 +1,6 @@
-const calc = document.getElementById("calc");
-const prov = document.getElementById("prov");
+const vidJump = document.getElementById("vidJump");
+const mlg = document.getElementById("mlg");
+const bookie = document.getElementById("bookie");
 const dereuck = document.getElementById("dereuck");
 const userName = document.getElementById("name");
 const email = document.getElementById("email");
@@ -35,24 +36,24 @@ const transcriptBtn = document.getElementById("transcript");
 const transcriptForm = document.querySelector(".transcriptForm");
 const projectBlock = document.querySelector(".project-block");
 const closeBtn = document.querySelector(".close-btn");
-const transcriptFormSubmit = document.getElementById('transcriptForm');
-const notification = document.getElementById('notification');
-const notificationMessage = document.getElementById('notificationMessage');
+const transcriptFormSubmit = document.getElementById("transcriptForm");
+const notification = document.getElementById("notification");
+const notificationMessage = document.getElementById("notificationMessage");
 
-if (calc !== null) {
-  calc.addEventListener("click", () => {
+if (vidJump !== null) {
+  vidJump.addEventListener("click", () => {
     window.location.href = "https://github.com/Werriess/VidJump";
   });
 }
 
-if (memory !== null) {
-  memory.addEventListener("click", () => {
+if (mlg !== null) {
+  mlg.addEventListener("click", () => {
     window.location.href = "https://github.com/Werriess/Machine-Learning-382-Project-1";
   });
 }
 
-if (prov !== null) {
-  prov.addEventListener("click", () => {
+if (bookie !== null) {
+  bookie.addEventListener("click", () => {
     window.location.href = "https://github.com/Werriess/bookie";
   });
 }
