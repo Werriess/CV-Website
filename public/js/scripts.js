@@ -53,7 +53,7 @@ if (memory !== null) {
 
 if (prov !== null) {
   prov.addEventListener("click", () => {
-    window.location.href = "https://github.com/Werriess/Province-game";
+    window.location.href = "https://github.com/Werriess/bookie";
   });
 }
 
