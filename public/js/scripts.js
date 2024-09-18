@@ -1,7 +1,7 @@
 const vidJump = document.getElementById("vidJump");
 const mlg = document.getElementById("mlg");
 const bookie = document.getElementById("bookie");
-const dereuck = document.getElementById("dereuck");
+const algoGraph = document.getElementById("algoGraph");
 const userName = document.getElementById("name");
 const email = document.getElementById("email");
 const tel = document.getElementById("phone");
@@ -58,8 +58,8 @@ if (bookie !== null) {
   });
 }
 
-if (dereuck !== null) {
-  dereuck.addEventListener("click", () => {
+if (algoGraph !== null) {
+  algoGraph.addEventListener("click", () => {
     window.location.href = "https://github.com/Werriess/De-reuck_website_New";
   });
 }
