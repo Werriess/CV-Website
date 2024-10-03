@@ -60,7 +60,7 @@ if (bookie !== null) {
 
 if (algoGraph !== null) {
   algoGraph.addEventListener("click", () => {
-    window.location.href = "https://github.com/Werriess/De-reuck_website_New";
+    window.location.href = "https://werriess.github.io/AlgoGraphix";
   });
 }
 
